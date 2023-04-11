@@ -5,17 +5,18 @@ const loadCountries = () => {
 };
 
 const createCountriesHTML = (countries) => {
-  const bla = countries.map((country) => {
+  const bla = countries.map(({ name, flags, capital, region }) => {
     return `
             <div class = "country">
-                <img src="${country.flags.png}">
-                <h3> ${country.name.common} </h3>
-                <span>Capital: ${country.capital} </span>
+                <img src="${flags.png}">
+                <h3> ${name.common} </h3>
+                <span>Capital: ${capital} </span>
+                <span>Region: ${region}</span>
             </div>
         `;
   });
   const container = document.getElementById("countries");
-  container.innerHTML = bla.join(" ");
+  container.innerHTML = bla.sort().join(" ");
 };
 
 loadCountries();
