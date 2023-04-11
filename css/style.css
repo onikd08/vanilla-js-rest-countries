@@ -1,7 +1,8 @@
 #countries {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
+  margin: 0 20px;
 }
 
 .country {
@@ -18,4 +19,8 @@
 .country img {
   width: 50%;
   height: 50%;
+}
+
+.headline {
+  text-align: center;
 }
